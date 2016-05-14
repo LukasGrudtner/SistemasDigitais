@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 
-entity contador is
+entity contador_p2 is
 	generic(size: natural := 16);
 	port (
 		clk, enable, reset : in std_logic;
@@ -10,7 +10,7 @@ entity contador is
 		);
 end entity;
 
-architecture hardware of contador is
+architecture hardware of contador_p2 is
 
 signal count : std_logic_vector(size-1 downto 0) := (others => '0');
 signal max : std_logic_vector(size-1 downto 0) := (others => '1');

@@ -12,7 +12,7 @@ end entity;
 
 architecture hardware of part2 is
 
-	component contador
+	component contador_p2
 		generic(size: natural := 16);
 		port(
 			clk, enable, reset : in std_logic;
@@ -31,7 +31,7 @@ architecture hardware of part2 is
 	
 begin
 
-	L0 : contador port map (KEY(1), SW(1), SW(0), outp_counter);
+	L0 : contador_p2 port map (KEY(1), SW(1), SW(0), outp_counter);
 	L1 : decod7seg port map (outp_counter(15 downto 12), HEX3);
 	L2 : decod7seg port map (outp_counter(11 downto 8), HEX2);
 	L3 : decod7seg port map (outp_counter(7 downto 4), HEX1);
