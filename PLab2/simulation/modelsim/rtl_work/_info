@@ -1,0 +1,118 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lukas\Desktop\CCO II\Sistemas Digitais\Prática\PLab2\simulation\modelsim
+Econtador_p4
+Z1 w1463237939
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\Lukas\Desktop\CCO II\Sistemas Digitais\Prática\PLab2\simulation\modelsim
+Z7 8C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/contador_p4.vhd
+Z8 FC:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/contador_p4.vhd
+l0
+L5
+V??9hBUiKN@GK2=6ak:C@<3
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1463242195.741000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/contador_p4.vhd|
+Z12 !s107 C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/contador_p4.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 fV4>`?3:2JPzEffcM2MDJ0
+!i10b 1
+Ahardware
+R2
+R3
+R4
+R5
+DEx4 work 11 contador_p4 0 22 ??9hBUiKN@GK2=6ak:C@<3
+l14
+L12
+V=^7NFkzIehOEdlDO7Do=k2
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 Uc6]XI0XW=bWN?Zge1ZFn0
+!i10b 1
+Efsm_clock
+Z15 w1463242022
+R2
+R3
+R4
+R5
+R6
+Z16 8C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/FSM_clock_p5.vhd
+Z17 FC:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/FSM_clock_p5.vhd
+l0
+L5
+VTD_5ToNHlAhGeM_I:E9_M2
+R9
+31
+Z18 !s108 1463242195.206000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/FSM_clock_p5.vhd|
+Z20 !s107 C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/FSM_clock_p5.vhd|
+R13
+R14
+!s100 LbB>ghNji0Km35n]M?;^10
+!i10b 1
+Ahardware
+R2
+R3
+R4
+R5
+DEx4 work 9 fsm_clock 0 22 TD_5ToNHlAhGeM_I:E9_M2
+l17
+L12
+V;9jWCdKTUPi8a;]kck]6O1
+R9
+31
+R18
+R19
+R20
+R13
+R14
+!s100 KR[U^Q]2oQR0kM^`cXaV[2
+!i10b 1
+Epart4
+Z21 w1463237954
+R4
+R5
+R6
+Z22 8C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/part4.vhd
+Z23 FC:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/part4.vhd
+l0
+L4
+VNT1:8ITUzjBadc0DPOBE@1
+!s100 0?8Nc`QzZ?aZ9`SXR<W2j1
+R9
+31
+!i10b 1
+Z24 !s108 1463242196.086000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/part4.vhd|
+Z26 !s107 C:/Users/Lukas/Desktop/CCO II/Sistemas Digitais/Prática/PLab2/part4.vhd|
+R13
+R14
+Ahardware
+R4
+R5
+DEx4 work 5 part4 0 22 NT1:8ITUzjBadc0DPOBE@1
+l29
+L11
+VGo07aKUnkEFzF_SKnQ8hc0
+!s100 l40kZXkM7@KMVc5?12=4M2
+R9
+31
+!i10b 1
+R24
+R25
+R26
+R13
+R14

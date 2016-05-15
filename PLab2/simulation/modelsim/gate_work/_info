@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lukas\Desktop\CCO II\Sistemas Digitais\Prática\PLab2\simulation\modelsim
+vpart4
+!i10b 1
+!s100 Z8ZNFj@;SG;MYoWW;N6Jj1
+Ie<PZTI=Q0ZZoaIz`FG@XX0
+VlNVH[ioa?HC]7Co::z]Ee1
+Z1 dC:\Users\Lukas\Desktop\CCO II\Sistemas Digitais\Prática\PLab2\simulation\modelsim
+w1463242091
+8plab2.vo
+Fplab2.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1463242149.193000
+!s107 plab2.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|plab2.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

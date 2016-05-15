@@ -5,7 +5,7 @@ use IEEE.std_logic_unsigned.all;
 entity FSM_hello is
 	port(
 			clock : in std_logic;
-			HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : out std_logic_vector(6 downto 0)
+			outp0, outp1, outp2, outp3, outp4, outp5, outp6, outp7 : out std_logic_vector(2 downto 0)
 		 );
 end entity;
 
@@ -28,10 +28,10 @@ P1: process(clock)
 -- S1 : _ _ H E L L O _				 E : "0000110"
 -- S2 : _ H E L L O _ _				 L : "1000111"
 -- S3 : H E L L O _ _ _				 O : "1000000"
--- S4 : E L L O _ _ _ H
--- S5 : L L O _ _ _ H E
--- S6 : L O _ _ _ H E L
--- S7 : O _ _ _ H E L L
+-- S4 : E L L O _ _ _ H				 H : "000"
+-- S5 : L L O _ _ _ H E				 E : "001"
+-- S6 : L O _ _ _ H E L           L : "010"
+-- S7 : O _ _ _ H E L L				 O : "011"
 	
 P2: process(EA)
 	begin
@@ -39,28 +39,84 @@ P2: process(EA)
 			case EA is
 			
 				when S0 =>
-					HEX7 <= "1111111"; HEX6 <= "1111111"; HEX5 <= "1111111"; HEX4 <= "0001001"; HEX3 <= "0000110"; HEX2 <= "1000111"; HEX1 <= "1000111"; HEX0 <= "1000000";
+					outp7 <= "111"; 
+					outp6 <= "111"; 
+					outp5 <= "111"; 
+					outp4 <= "000"; 
+					outp3 <= "001"; 
+					outp2 <= "010"; 
+					outp1 <= "010"; 
+					outp0 <= "011";
 					PE <= S1;
 				when S1 => 
-					HEX7 <= "1111111"; HEX6 <= "1111111"; HEX5 <= "0001001"; HEX4 <= "0000110"; HEX3 <= "1000111"; HEX2 <= "1000111"; HEX1 <= "1000000"; HEX0 <= "1111111";
+					outp7 <= "111"; 
+					outp6 <= "111"; 
+					outp5 <= "000"; 
+					outp4 <= "001"; 
+					outp3 <= "010"; 
+					outp2 <= "010"; 
+					outp1 <= "011"; 
+					outp0 <= "111";
 					PE <= S2;
 				when S2 =>
-					HEX7 <= "1111111"; HEX6 <= "0001001"; HEX5 <= "0000110"; HEX4 <= "1000111"; HEX3 <= "1000111"; HEX2 <= "1000000"; HEX1 <= "1111111"; HEX0 <= "1111111";
+					outp7 <= "111"; 
+					outp6 <= "000"; 
+					outp5 <= "001"; 
+					outp4 <= "010"; 
+					outp3 <= "010"; 
+					outp2 <= "011"; 
+					outp1 <= "111"; 
+					outp0 <= "111";
 					PE <= S3;
 				when S3 =>
-					HEX7 <= "0001001"; HEX6 <= "0000110"; HEX5 <= "1000111"; HEX4 <= "1000111"; HEX3 <= "1000000"; HEX2 <= "1111111"; HEX1 <= "1111111"; HEX0 <= "1111111";
+					outp7 <= "000"; 
+					outp6 <= "001";
+					outp5 <= "010"; 
+					outp4 <= "010"; 
+					outp3 <= "011"; 
+					outp2 <= "111"; 
+					outp1 <= "111"; 
+					outp0 <= "111";
 					PE <= S4;
 				when S4 =>
-					HEX7 <= "0000110"; HEX6 <= "1000111"; HEX5 <= "1000111"; HEX4 <= "1000000"; HEX3 <= "1111111"; HEX2 <= "1111111"; HEX1 <= "1111111"; HEX0 <= "0001001";
+					outp7 <= "001"; 
+					outp6 <= "010"; 
+					outp5 <= "010"; 
+					outp4 <= "011"; 
+					outp3 <= "111"; 
+					outp2 <= "111"; 
+					outp1 <= "111"; 
+					outp0 <= "000";
 					PE <= S5;
 				when S5 =>
-					HEX7 <= "1000111"; HEX6 <= "1000111"; HEX5 <= "1000000"; HEX4 <= "1111111"; HEX3 <= "1111111"; HEX2 <= "1111111"; HEX1 <= "0001001"; HEX0 <= "0000110";
+					outp7 <= "010"; 
+					outp6 <= "010"; 
+					outp5 <= "011"; 
+					outp4 <= "111"; 
+					outp3 <= "111"; 
+					outp2 <= "111"; 
+					outp1 <= "000"; 
+					outp0 <= "001";
 					PE <= S6;
 				when S6 =>
-					HEX7 <= "1000111"; HEX6 <= "1000000"; HEX5 <= "1111111"; HEX4 <= "1111111"; HEX3 <= "1111111"; HEX2 <= "0001001"; HEX1 <= "0000110"; HEX0 <= "1000111";
+					outp7 <= "010"; 
+					outp6 <= "011"; 
+					outp5 <= "111"; 
+					outp4 <= "111"; 
+					outp3 <= "111"; 
+					outp2 <= "000"; 
+					outp1 <= "001"; 
+					outp0 <= "010";
 					PE <= S7;
 				when S7 =>
-					HEX7 <= "1000000"; HEX6 <= "1111111"; HEX5 <= "1111111"; HEX4 <= "1111111"; HEX3 <= "0001001"; HEX2 <= "0000110"; HEX1 <= "1000111"; HEX0 <= "1000111";
+					outp7 <= "011"; 
+					outp6 <= "111"; 
+					outp5 <= "111"; 
+					outp4 <= "111"; 
+					outp3 <= "000"; 
+					outp2 <= "001"; 
+					outp1 <= "010"; 
+					outp0 <= "010";
 					PE <= S0;
 			end case;
 	end process;
