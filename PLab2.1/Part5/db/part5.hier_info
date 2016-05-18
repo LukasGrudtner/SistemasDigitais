@@ -1,0 +1,299 @@
+|part5
+CLOCK_50 => FSM_clock:L0.clock
+HEX0[0] <= decod7seg_p5:L2.HEX[0]
+HEX0[1] <= decod7seg_p5:L2.HEX[1]
+HEX0[2] <= decod7seg_p5:L2.HEX[2]
+HEX0[3] <= decod7seg_p5:L2.HEX[3]
+HEX0[4] <= decod7seg_p5:L2.HEX[4]
+HEX0[5] <= decod7seg_p5:L2.HEX[5]
+HEX0[6] <= decod7seg_p5:L2.HEX[6]
+HEX1[0] <= decod7seg_p5:L3.HEX[0]
+HEX1[1] <= decod7seg_p5:L3.HEX[1]
+HEX1[2] <= decod7seg_p5:L3.HEX[2]
+HEX1[3] <= decod7seg_p5:L3.HEX[3]
+HEX1[4] <= decod7seg_p5:L3.HEX[4]
+HEX1[5] <= decod7seg_p5:L3.HEX[5]
+HEX1[6] <= decod7seg_p5:L3.HEX[6]
+HEX2[0] <= decod7seg_p5:L4.HEX[0]
+HEX2[1] <= decod7seg_p5:L4.HEX[1]
+HEX2[2] <= decod7seg_p5:L4.HEX[2]
+HEX2[3] <= decod7seg_p5:L4.HEX[3]
+HEX2[4] <= decod7seg_p5:L4.HEX[4]
+HEX2[5] <= decod7seg_p5:L4.HEX[5]
+HEX2[6] <= decod7seg_p5:L4.HEX[6]
+HEX3[0] <= decod7seg_p5:L5.HEX[0]
+HEX3[1] <= decod7seg_p5:L5.HEX[1]
+HEX3[2] <= decod7seg_p5:L5.HEX[2]
+HEX3[3] <= decod7seg_p5:L5.HEX[3]
+HEX3[4] <= decod7seg_p5:L5.HEX[4]
+HEX3[5] <= decod7seg_p5:L5.HEX[5]
+HEX3[6] <= decod7seg_p5:L5.HEX[6]
+HEX4[0] <= decod7seg_p5:L6.HEX[0]
+HEX4[1] <= decod7seg_p5:L6.HEX[1]
+HEX4[2] <= decod7seg_p5:L6.HEX[2]
+HEX4[3] <= decod7seg_p5:L6.HEX[3]
+HEX4[4] <= decod7seg_p5:L6.HEX[4]
+HEX4[5] <= decod7seg_p5:L6.HEX[5]
+HEX4[6] <= decod7seg_p5:L6.HEX[6]
+HEX5[0] <= decod7seg_p5:L7.HEX[0]
+HEX5[1] <= decod7seg_p5:L7.HEX[1]
+HEX5[2] <= decod7seg_p5:L7.HEX[2]
+HEX5[3] <= decod7seg_p5:L7.HEX[3]
+HEX5[4] <= decod7seg_p5:L7.HEX[4]
+HEX5[5] <= decod7seg_p5:L7.HEX[5]
+HEX5[6] <= decod7seg_p5:L7.HEX[6]
+HEX6[0] <= decod7seg_p5:L8.HEX[0]
+HEX6[1] <= decod7seg_p5:L8.HEX[1]
+HEX6[2] <= decod7seg_p5:L8.HEX[2]
+HEX6[3] <= decod7seg_p5:L8.HEX[3]
+HEX6[4] <= decod7seg_p5:L8.HEX[4]
+HEX6[5] <= decod7seg_p5:L8.HEX[5]
+HEX6[6] <= decod7seg_p5:L8.HEX[6]
+HEX7[0] <= decod7seg_p5:L9.HEX[0]
+HEX7[1] <= decod7seg_p5:L9.HEX[1]
+HEX7[2] <= decod7seg_p5:L9.HEX[2]
+HEX7[3] <= decod7seg_p5:L9.HEX[3]
+HEX7[4] <= decod7seg_p5:L9.HEX[4]
+HEX7[5] <= decod7seg_p5:L9.HEX[5]
+HEX7[6] <= decod7seg_p5:L9.HEX[6]
+
+
+|part5|FSM_clock:L0
+clock => C~reg0.CLK
+clock => PE.CLK
+clock => contador[0].CLK
+clock => contador[1].CLK
+clock => contador[2].CLK
+clock => contador[3].CLK
+clock => contador[4].CLK
+clock => contador[5].CLK
+clock => contador[6].CLK
+clock => contador[7].CLK
+clock => contador[8].CLK
+clock => contador[9].CLK
+clock => contador[10].CLK
+clock => contador[11].CLK
+clock => contador[12].CLK
+clock => contador[13].CLK
+clock => contador[14].CLK
+clock => contador[15].CLK
+clock => contador[16].CLK
+clock => contador[17].CLK
+clock => contador[18].CLK
+clock => contador[19].CLK
+clock => contador[20].CLK
+clock => contador[21].CLK
+clock => contador[22].CLK
+clock => contador[23].CLK
+clock => contador[24].CLK
+clock => contador[25].CLK
+clock => contador[26].CLK
+clock => contador[27].CLK
+clock => EA.CLK
+C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|FSM_hello:L1
+clock => EA~1.DATAIN
+outp0[0] <= WideOr15.DB_MAX_OUTPUT_PORT_TYPE
+outp0[1] <= outp0.DB_MAX_OUTPUT_PORT_TYPE
+outp0[2] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
+outp1[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+outp1[1] <= outp1.DB_MAX_OUTPUT_PORT_TYPE
+outp1[2] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+outp2[0] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+outp2[1] <= outp2.DB_MAX_OUTPUT_PORT_TYPE
+outp2[2] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+outp3[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+outp3[1] <= outp3.DB_MAX_OUTPUT_PORT_TYPE
+outp3[2] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+outp4[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+outp4[1] <= outp4.DB_MAX_OUTPUT_PORT_TYPE
+outp4[2] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+outp5[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+outp5[1] <= outp5.DB_MAX_OUTPUT_PORT_TYPE
+outp5[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+outp6[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+outp6[1] <= outp6.DB_MAX_OUTPUT_PORT_TYPE
+outp6[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+outp7[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+outp7[1] <= outp7.DB_MAX_OUTPUT_PORT_TYPE
+outp7[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L2
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L3
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L4
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L5
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L6
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L7
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L8
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|decod7seg_p5:L9
+inpt[0] => Equal0.IN2
+inpt[0] => Equal1.IN1
+inpt[0] => Equal2.IN2
+inpt[0] => Equal3.IN2
+inpt[1] => Equal0.IN1
+inpt[1] => Equal1.IN2
+inpt[1] => Equal2.IN1
+inpt[1] => Equal3.IN1
+inpt[2] => Equal0.IN0
+inpt[2] => Equal1.IN0
+inpt[2] => Equal2.IN0
+inpt[2] => Equal3.IN0
+HEX[0] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
+
+

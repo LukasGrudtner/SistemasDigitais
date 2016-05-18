@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lukas\Desktop\CCO II\Sistemas Digitais\PLab2\Part2\simulation\qsim
+vpart2
+Z1 !s100 Wi^>1E1:gF3[E`Q5:]VOR3
+Z2 I`94GKA]MS7elLSn]R[_GE2
+Z3 VZUNY5i^A3j;oAfE@>g6:@2
+Z4 dC:\Users\Lukas\Desktop\CCO II\Sistemas Digitais\PLab2\Part2\simulation\qsim
+Z5 w1463609683
+Z6 8part2.vo
+Z7 Fpart2.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|part2.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1463609684.450000
+Z12 !s107 part2.vo|
+!s101 -O0
+vpart2_vlg_check_tst
+!i10b 1
+Z13 !s100 1QOmNANbd;eTZ]hddbomQ3
+Z14 INegKE>onHjBD5aZ7?]7zI3
+Z15 VNM4OZ;VaNBO0H[PiN`gSX1
+R4
+Z16 w1463609682
+Z17 8part2.vt
+Z18 Fpart2.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1463609684.785000
+Z20 !s107 part2.vt|
+Z21 !s90 -work|work|part2.vt|
+!s101 -O0
+R10
+vpart2_vlg_sample_tst
+!i10b 1
+Z22 !s100 DF`iIn;ozO29Re^]FiPj_2
+Z23 IK?<oo>>c1Ejbg>[8foiPU2
+Z24 V_dKgL[Y@Z=;emjoknaGSI3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vpart2_vlg_vec_tst
+!i10b 1
+!s100 M06LAnnh207A;[`V0WkR`0
+I3?RLV>kC=i:BZYe0W?EKH3
+Z25 VifI:LfULZ:6Nce^B2GIZ]3
+R4
+R16
+R17
+R18
+Z26 L0 663
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

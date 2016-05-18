@@ -1,0 +1,1564 @@
+TimeQuest Timing Analyzer report for part5
+Wed May 18 19:33:39 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Setup: 'FSM_clock:L0|C'
+ 13. Slow Model Hold: 'CLOCK_50'
+ 14. Slow Model Hold: 'FSM_clock:L0|C'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 16. Slow Model Minimum Pulse Width: 'FSM_clock:L0|C'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'CLOCK_50'
+ 25. Fast Model Setup: 'FSM_clock:L0|C'
+ 26. Fast Model Hold: 'CLOCK_50'
+ 27. Fast Model Hold: 'FSM_clock:L0|C'
+ 28. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 29. Fast Model Minimum Pulse Width: 'FSM_clock:L0|C'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; part5                                                             ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                         ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; Clock Name     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets            ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+; CLOCK_50       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }       ;
+; FSM_clock:L0|C ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FSM_clock:L0|C } ;
++----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                ;
++-------------+-----------------+----------------+-------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name     ; Note                                                  ;
++-------------+-----------------+----------------+-------------------------------------------------------+
+; 284.01 MHz  ; 284.01 MHz      ; CLOCK_50       ;                                                       ;
+; 1113.59 MHz ; 500.0 MHz       ; FSM_clock:L0|C ; limit due to high minimum pulse width violation (tch) ;
++-------------+-----------------+----------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------+
+; Slow Model Setup Summary                ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; CLOCK_50       ; -2.521 ; -43.598       ;
+; FSM_clock:L0|C ; 0.102  ; 0.000         ;
++----------------+--------+---------------+
+
+
++----------------------------------------+
+; Slow Model Hold Summary                ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; CLOCK_50       ; 0.523 ; 0.000         ;
+; FSM_clock:L0|C ; 0.526 ; 0.000         ;
++----------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------+
+; Slow Model Minimum Pulse Width Summary  ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; CLOCK_50       ; -1.380 ; -32.380       ;
+; FSM_clock:L0|C ; -0.500 ; -8.000        ;
++----------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                         ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -2.521 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.556      ;
+; -2.481 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.516      ;
+; -2.450 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.485      ;
+; -2.410 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.445      ;
+; -2.379 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.414      ;
+; -2.379 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.414      ;
+; -2.340 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.375      ;
+; -2.339 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.374      ;
+; -2.308 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.343      ;
+; -2.308 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.343      ;
+; -2.269 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.304      ;
+; -2.269 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.304      ;
+; -2.268 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.303      ;
+; -2.237 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.272      ;
+; -2.237 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.272      ;
+; -2.198 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.233      ;
+; -2.198 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.233      ;
+; -2.197 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.232      ;
+; -2.166 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.201      ;
+; -2.166 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.201      ;
+; -2.166 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.201      ;
+; -2.127 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.162      ;
+; -2.127 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.162      ;
+; -2.126 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.161      ;
+; -2.095 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.130      ;
+; -2.095 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.130      ;
+; -2.056 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.091      ;
+; -2.056 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.091      ;
+; -2.037 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.072      ;
+; -2.024 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.059      ;
+; -2.024 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.059      ;
+; -2.007 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.042      ;
+; -1.985 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.020      ;
+; -1.985 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.020      ;
+; -1.967 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.002      ;
+; -1.966 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.001      ;
+; -1.953 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.988      ;
+; -1.936 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.971      ;
+; -1.927 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.962      ;
+; -1.914 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.949      ;
+; -1.900 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.935      ;
+; -1.898 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.934      ;
+; -1.896 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.931      ;
+; -1.895 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.930      ;
+; -1.882 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.917      ;
+; -1.865 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.900      ;
+; -1.865 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.900      ;
+; -1.856 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.891      ;
+; -1.829 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.864      ;
+; -1.826 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.861      ;
+; -1.825 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.860      ;
+; -1.824 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.859      ;
+; -1.819 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.856      ;
+; -1.811 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.846      ;
+; -1.794 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.829      ;
+; -1.794 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.829      ;
+; -1.790 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.825      ;
+; -1.785 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.820      ;
+; -1.758 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.793      ;
+; -1.758 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.793      ;
+; -1.755 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.754 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.789      ;
+; -1.753 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.788      ;
+; -1.748 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.785      ;
+; -1.723 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.758      ;
+; -1.723 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.758      ;
+; -1.719 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.754      ;
+; -1.714 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.749      ;
+; -1.687 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.722      ;
+; -1.687 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.722      ;
+; -1.684 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.719      ;
+; -1.684 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.719      ;
+; -1.683 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.718      ;
+; -1.682 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.717      ;
+; -1.652 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.687      ;
+; -1.652 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.687      ;
+; -1.652 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.687      ;
+; -1.648 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.683      ;
+; -1.648 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.683      ;
+; -1.643 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.678      ;
+; -1.624 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|C            ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.660      ;
+; -1.616 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.651      ;
+; -1.616 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.651      ;
+; -1.613 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.648      ;
+; -1.613 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.648      ;
+; -1.612 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.647      ;
+; -1.590 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.626      ;
+; -1.588 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.624      ;
+; -1.581 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.616      ;
+; -1.581 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.616      ;
+; -1.581 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.616      ;
+; -1.577 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.612      ;
+; -1.577 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.612      ;
+; -1.577 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.612      ;
+; -1.572 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.607      ;
+; -1.561 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.597      ;
+; -1.558 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.594      ;
+; -1.556 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.593      ;
+; -1.545 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.580      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'FSM_clock:L0|C'                                                                                         ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; 0.102 ; FSM_hello:L1|EA.S3 ; FSM_hello:L1|EA.S4 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.934      ;
+; 0.110 ; FSM_hello:L1|EA.S7 ; FSM_hello:L1|EA.S0 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.926      ;
+; 0.238 ; FSM_hello:L1|EA.S1 ; FSM_hello:L1|EA.S2 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.798      ;
+; 0.238 ; FSM_hello:L1|EA.S0 ; FSM_hello:L1|EA.S1 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.798      ;
+; 0.240 ; FSM_hello:L1|EA.S2 ; FSM_hello:L1|EA.S3 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.796      ;
+; 0.240 ; FSM_hello:L1|EA.S4 ; FSM_hello:L1|EA.S5 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.796      ;
+; 0.242 ; FSM_hello:L1|EA.S6 ; FSM_hello:L1|EA.S7 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.794      ;
+; 0.244 ; FSM_hello:L1|EA.S5 ; FSM_hello:L1|EA.S6 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.792      ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                         ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.523 ; FSM_clock:L0|contador[27] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.527 ; FSM_clock:L0|PE           ; FSM_clock:L0|EA           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.663 ; FSM_clock:L0|EA           ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.929      ;
+; 0.795 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.801 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.067      ;
+; 0.806 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; FSM_clock:L0|contador[13] ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; FSM_clock:L0|contador[25] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.808 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.074      ;
+; 0.809 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.075      ;
+; 0.809 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.075      ;
+; 0.810 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; FSM_clock:L0|contador[18] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.814 ; FSM_clock:L0|contador[21] ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.837 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.103      ;
+; 0.838 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.105      ;
+; 0.839 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.105      ;
+; 0.841 ; FSM_clock:L0|contador[17] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.107      ;
+; 0.842 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842 ; FSM_clock:L0|contador[19] ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842 ; FSM_clock:L0|contador[24] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842 ; FSM_clock:L0|contador[26] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.845 ; FSM_clock:L0|contador[22] ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.846 ; FSM_clock:L0|contador[20] ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.942 ; FSM_clock:L0|EA           ; FSM_clock:L0|C            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.208      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 0.976 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.242      ;
+; 1.178 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.444      ;
+; 1.184 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.450      ;
+; 1.189 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189 ; FSM_clock:L0|contador[25] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.191 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.457      ;
+; 1.192 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.458      ;
+; 1.192 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.458      ;
+; 1.193 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193 ; FSM_clock:L0|contador[18] ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.459      ;
+; 1.223 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.489      ;
+; 1.224 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.490      ;
+; 1.225 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.491      ;
+; 1.225 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.491      ;
+; 1.227 ; FSM_clock:L0|contador[17] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.493      ;
+; 1.228 ; FSM_clock:L0|contador[26] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.228 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.228 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.228 ; FSM_clock:L0|contador[24] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.228 ; FSM_clock:L0|contador[19] ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.231 ; FSM_clock:L0|contador[22] ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.497      ;
+; 1.232 ; FSM_clock:L0|contador[20] ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.498      ;
+; 1.249 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.515      ;
+; 1.255 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.521      ;
+; 1.260 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; FSM_clock:L0|contador[25] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.260 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.526      ;
+; 1.262 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.528      ;
+; 1.263 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.529      ;
+; 1.263 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.529      ;
+; 1.264 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.530      ;
+; 1.264 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.530      ;
+; 1.264 ; FSM_clock:L0|contador[18] ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.530      ;
+; 1.281 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.547      ;
+; 1.282 ; FSM_clock:L0|contador[13] ; FSM_clock:L0|contador[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.547      ;
+; 1.289 ; FSM_clock:L0|contador[21] ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.555      ;
+; 1.294 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.560      ;
+; 1.295 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.561      ;
+; 1.296 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.562      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'FSM_clock:L0|C'                                                                                          ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; 0.526 ; FSM_hello:L1|EA.S5 ; FSM_hello:L1|EA.S6 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.792      ;
+; 0.528 ; FSM_hello:L1|EA.S6 ; FSM_hello:L1|EA.S7 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.794      ;
+; 0.530 ; FSM_hello:L1|EA.S2 ; FSM_hello:L1|EA.S3 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.796      ;
+; 0.530 ; FSM_hello:L1|EA.S4 ; FSM_hello:L1|EA.S5 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.796      ;
+; 0.532 ; FSM_hello:L1|EA.S1 ; FSM_hello:L1|EA.S2 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.798      ;
+; 0.532 ; FSM_hello:L1|EA.S0 ; FSM_hello:L1|EA.S1 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.798      ;
+; 0.660 ; FSM_hello:L1|EA.S7 ; FSM_hello:L1|EA.S0 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.926      ;
+; 0.668 ; FSM_hello:L1|EA.S3 ; FSM_hello:L1|EA.S4 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.934      ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|C            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|C            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|EA           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|EA           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|PE           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|PE           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|C|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|C|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|EA|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|EA|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|PE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|PE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[10]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[10]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[11]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[11]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[12]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[12]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[13]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[13]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[14]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[14]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[15]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[15]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[16]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[16]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[17]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[17]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[18]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[18]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[19]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[19]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[20]|clk       ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'FSM_clock:L0|C'                                                                ;
++--------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock          ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S0    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S0    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S1    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S1    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S2    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S2    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S3    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S3    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S4    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S4    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S5    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S5    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S6    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S6    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S7    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S7    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L0|C|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L0|C|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S7|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S7|clk          ;
++--------+--------------+----------------+------------------+----------------+------------+-----------------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------+----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port     ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+----------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; FSM_clock:L0|C ; 13.136 ; 13.136 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[0]  ; FSM_clock:L0|C ; 9.044  ; 9.044  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[1]  ; FSM_clock:L0|C ; 8.833  ; 8.833  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[2]  ; FSM_clock:L0|C ; 8.843  ; 8.843  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[3]  ; FSM_clock:L0|C ; 8.034  ; 8.034  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[4]  ; FSM_clock:L0|C ; 7.992  ; 7.992  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[5]  ; FSM_clock:L0|C ; 7.976  ; 7.976  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[6]  ; FSM_clock:L0|C ; 13.136 ; 13.136 ; Rise       ; FSM_clock:L0|C  ;
+; HEX1[*]   ; FSM_clock:L0|C ; 12.518 ; 12.518 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[0]  ; FSM_clock:L0|C ; 11.556 ; 11.556 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[1]  ; FSM_clock:L0|C ; 11.886 ; 11.886 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[2]  ; FSM_clock:L0|C ; 11.444 ; 11.444 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[3]  ; FSM_clock:L0|C ; 10.920 ; 10.920 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[4]  ; FSM_clock:L0|C ; 10.777 ; 10.777 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[5]  ; FSM_clock:L0|C ; 10.762 ; 10.762 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[6]  ; FSM_clock:L0|C ; 12.518 ; 12.518 ; Rise       ; FSM_clock:L0|C  ;
+; HEX2[*]   ; FSM_clock:L0|C ; 11.720 ; 11.720 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[0]  ; FSM_clock:L0|C ; 11.720 ; 11.720 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[1]  ; FSM_clock:L0|C ; 11.414 ; 11.414 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[2]  ; FSM_clock:L0|C ; 11.454 ; 11.454 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[3]  ; FSM_clock:L0|C ; 11.341 ; 11.341 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[4]  ; FSM_clock:L0|C ; 11.028 ; 11.028 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[5]  ; FSM_clock:L0|C ; 11.028 ; 11.028 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[6]  ; FSM_clock:L0|C ; 11.386 ; 11.386 ; Rise       ; FSM_clock:L0|C  ;
+; HEX3[*]   ; FSM_clock:L0|C ; 12.079 ; 12.079 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[0]  ; FSM_clock:L0|C ; 11.963 ; 11.963 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[1]  ; FSM_clock:L0|C ; 11.948 ; 11.948 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[2]  ; FSM_clock:L0|C ; 11.948 ; 11.948 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[3]  ; FSM_clock:L0|C ; 11.182 ; 11.182 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[4]  ; FSM_clock:L0|C ; 11.706 ; 11.706 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[5]  ; FSM_clock:L0|C ; 11.331 ; 11.331 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[6]  ; FSM_clock:L0|C ; 12.079 ; 12.079 ; Rise       ; FSM_clock:L0|C  ;
+; HEX4[*]   ; FSM_clock:L0|C ; 10.339 ; 10.339 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[0]  ; FSM_clock:L0|C ; 10.329 ; 10.329 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[1]  ; FSM_clock:L0|C ; 10.339 ; 10.339 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[2]  ; FSM_clock:L0|C ; 10.339 ; 10.339 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[3]  ; FSM_clock:L0|C ; 9.645  ; 9.645  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[4]  ; FSM_clock:L0|C ; 9.603  ; 9.603  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[5]  ; FSM_clock:L0|C ; 9.603  ; 9.603  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[6]  ; FSM_clock:L0|C ; 10.115 ; 10.115 ; Rise       ; FSM_clock:L0|C  ;
+; HEX5[*]   ; FSM_clock:L0|C ; 10.082 ; 10.082 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[0]  ; FSM_clock:L0|C ; 9.791  ; 9.791  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[1]  ; FSM_clock:L0|C ; 9.880  ; 9.880  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[2]  ; FSM_clock:L0|C ; 9.880  ; 9.880  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[3]  ; FSM_clock:L0|C ; 9.170  ; 9.170  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[4]  ; FSM_clock:L0|C ; 9.095  ; 9.095  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[5]  ; FSM_clock:L0|C ; 9.095  ; 9.095  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[6]  ; FSM_clock:L0|C ; 10.082 ; 10.082 ; Rise       ; FSM_clock:L0|C  ;
+; HEX6[*]   ; FSM_clock:L0|C ; 10.619 ; 10.619 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[0]  ; FSM_clock:L0|C ; 9.891  ; 9.891  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[1]  ; FSM_clock:L0|C ; 10.619 ; 10.619 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[2]  ; FSM_clock:L0|C ; 10.619 ; 10.619 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[3]  ; FSM_clock:L0|C ; 9.652  ; 9.652  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[4]  ; FSM_clock:L0|C ; 9.652  ; 9.652  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[5]  ; FSM_clock:L0|C ; 9.632  ; 9.632  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[6]  ; FSM_clock:L0|C ; 10.294 ; 10.294 ; Rise       ; FSM_clock:L0|C  ;
+; HEX7[*]   ; FSM_clock:L0|C ; 11.067 ; 11.067 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[0]  ; FSM_clock:L0|C ; 10.582 ; 10.582 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[1]  ; FSM_clock:L0|C ; 11.067 ; 11.067 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[2]  ; FSM_clock:L0|C ; 11.037 ; 11.037 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[3]  ; FSM_clock:L0|C ; 9.593  ; 9.593  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[4]  ; FSM_clock:L0|C ; 9.675  ; 9.675  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[5]  ; FSM_clock:L0|C ; 9.993  ; 9.993  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[6]  ; FSM_clock:L0|C ; 10.351 ; 10.351 ; Rise       ; FSM_clock:L0|C  ;
++-----------+----------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++-----------+----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port     ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+----------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; FSM_clock:L0|C ; 7.628  ; 7.628  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[0]  ; FSM_clock:L0|C ; 7.779  ; 7.779  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[1]  ; FSM_clock:L0|C ; 7.853  ; 7.853  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[2]  ; FSM_clock:L0|C ; 7.863  ; 7.863  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[3]  ; FSM_clock:L0|C ; 7.628  ; 7.628  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[4]  ; FSM_clock:L0|C ; 7.689  ; 7.689  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[5]  ; FSM_clock:L0|C ; 7.673  ; 7.673  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[6]  ; FSM_clock:L0|C ; 11.422 ; 11.422 ; Rise       ; FSM_clock:L0|C  ;
+; HEX1[*]   ; FSM_clock:L0|C ; 8.509  ; 8.509  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[0]  ; FSM_clock:L0|C ; 9.217  ; 9.217  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[1]  ; FSM_clock:L0|C ; 9.331  ; 9.331  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[2]  ; FSM_clock:L0|C ; 8.889  ; 8.889  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[3]  ; FSM_clock:L0|C ; 8.509  ; 8.509  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[4]  ; FSM_clock:L0|C ; 8.718  ; 8.718  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[5]  ; FSM_clock:L0|C ; 8.703  ; 8.703  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[6]  ; FSM_clock:L0|C ; 11.116 ; 11.116 ; Rise       ; FSM_clock:L0|C  ;
+; HEX2[*]   ; FSM_clock:L0|C ; 8.689  ; 8.689  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[0]  ; FSM_clock:L0|C ; 9.254  ; 9.254  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[1]  ; FSM_clock:L0|C ; 8.689  ; 8.689  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[2]  ; FSM_clock:L0|C ; 8.729  ; 8.729  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[3]  ; FSM_clock:L0|C ; 8.864  ; 8.864  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[4]  ; FSM_clock:L0|C ; 8.887  ; 8.887  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[5]  ; FSM_clock:L0|C ; 8.887  ; 8.887  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[6]  ; FSM_clock:L0|C ; 8.941  ; 8.941  ; Rise       ; FSM_clock:L0|C  ;
+; HEX3[*]   ; FSM_clock:L0|C ; 8.382  ; 8.382  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[0]  ; FSM_clock:L0|C ; 8.382  ; 8.382  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[1]  ; FSM_clock:L0|C ; 8.509  ; 8.509  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[2]  ; FSM_clock:L0|C ; 8.509  ; 8.509  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[3]  ; FSM_clock:L0|C ; 8.552  ; 8.552  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[4]  ; FSM_clock:L0|C ; 9.221  ; 9.221  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[5]  ; FSM_clock:L0|C ; 8.846  ; 8.846  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[6]  ; FSM_clock:L0|C ; 8.992  ; 8.992  ; Rise       ; FSM_clock:L0|C  ;
+; HEX4[*]   ; FSM_clock:L0|C ; 8.266  ; 8.266  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[0]  ; FSM_clock:L0|C ; 8.266  ; 8.266  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[1]  ; FSM_clock:L0|C ; 8.769  ; 8.769  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[2]  ; FSM_clock:L0|C ; 8.769  ; 8.769  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[3]  ; FSM_clock:L0|C ; 8.886  ; 8.886  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[4]  ; FSM_clock:L0|C ; 8.583  ; 8.583  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[5]  ; FSM_clock:L0|C ; 8.583  ; 8.583  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[6]  ; FSM_clock:L0|C ; 9.095  ; 9.095  ; Rise       ; FSM_clock:L0|C  ;
+; HEX5[*]   ; FSM_clock:L0|C ; 8.138  ; 8.138  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[0]  ; FSM_clock:L0|C ; 8.558  ; 8.558  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[1]  ; FSM_clock:L0|C ; 8.853  ; 8.853  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[2]  ; FSM_clock:L0|C ; 8.853  ; 8.853  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[3]  ; FSM_clock:L0|C ; 8.138  ; 8.138  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[4]  ; FSM_clock:L0|C ; 8.378  ; 8.378  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[5]  ; FSM_clock:L0|C ; 8.378  ; 8.378  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[6]  ; FSM_clock:L0|C ; 8.684  ; 8.684  ; Rise       ; FSM_clock:L0|C  ;
+; HEX6[*]   ; FSM_clock:L0|C ; 8.556  ; 8.556  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[0]  ; FSM_clock:L0|C ; 8.556  ; 8.556  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[1]  ; FSM_clock:L0|C ; 8.834  ; 8.834  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[2]  ; FSM_clock:L0|C ; 8.834  ; 8.834  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[3]  ; FSM_clock:L0|C ; 8.882  ; 8.882  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[4]  ; FSM_clock:L0|C ; 8.652  ; 8.652  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[5]  ; FSM_clock:L0|C ; 8.632  ; 8.632  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[6]  ; FSM_clock:L0|C ; 8.981  ; 8.981  ; Rise       ; FSM_clock:L0|C  ;
+; HEX7[*]   ; FSM_clock:L0|C ; 8.900  ; 8.900  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[0]  ; FSM_clock:L0|C ; 8.936  ; 8.936  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[1]  ; FSM_clock:L0|C ; 9.087  ; 9.087  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[2]  ; FSM_clock:L0|C ; 9.057  ; 9.057  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[3]  ; FSM_clock:L0|C ; 8.900  ; 8.900  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[4]  ; FSM_clock:L0|C ; 8.942  ; 8.942  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[5]  ; FSM_clock:L0|C ; 9.260  ; 9.260  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[6]  ; FSM_clock:L0|C ; 9.461  ; 9.461  ; Rise       ; FSM_clock:L0|C  ;
++-----------+----------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------+
+; Fast Model Setup Summary                ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; CLOCK_50       ; -0.702 ; -6.804        ;
+; FSM_clock:L0|C ; 0.553  ; 0.000         ;
++----------------+--------+---------------+
+
+
++----------------------------------------+
+; Fast Model Hold Summary                ;
++----------------+-------+---------------+
+; Clock          ; Slack ; End Point TNS ;
++----------------+-------+---------------+
+; CLOCK_50       ; 0.240 ; 0.000         ;
+; FSM_clock:L0|C ; 0.241 ; 0.000         ;
++----------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------+
+; Fast Model Minimum Pulse Width Summary  ;
++----------------+--------+---------------+
+; Clock          ; Slack  ; End Point TNS ;
++----------------+--------+---------------+
+; CLOCK_50       ; -1.380 ; -32.380       ;
+; FSM_clock:L0|C ; -0.500 ; -8.000        ;
++----------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                         ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -0.702 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.733      ;
+; -0.677 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.708      ;
+; -0.667 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.698      ;
+; -0.642 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.673      ;
+; -0.632 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.663      ;
+; -0.632 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.663      ;
+; -0.608 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.639      ;
+; -0.607 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.638      ;
+; -0.597 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.628      ;
+; -0.597 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.628      ;
+; -0.573 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.604      ;
+; -0.573 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.604      ;
+; -0.572 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.603      ;
+; -0.562 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.593      ;
+; -0.562 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.593      ;
+; -0.538 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.569      ;
+; -0.538 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.569      ;
+; -0.537 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.568      ;
+; -0.527 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.558      ;
+; -0.527 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.558      ;
+; -0.523 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.554      ;
+; -0.503 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.534      ;
+; -0.503 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.534      ;
+; -0.502 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.533      ;
+; -0.492 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.523      ;
+; -0.488 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.519      ;
+; -0.468 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.499      ;
+; -0.468 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.499      ;
+; -0.457 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.488      ;
+; -0.453 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.484      ;
+; -0.444 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.475      ;
+; -0.433 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.464      ;
+; -0.433 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.464      ;
+; -0.433 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.464      ;
+; -0.418 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.449      ;
+; -0.409 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.440      ;
+; -0.408 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.439      ;
+; -0.398 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.429      ;
+; -0.398 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.429      ;
+; -0.395 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.426      ;
+; -0.383 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.414      ;
+; -0.376 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.407      ;
+; -0.374 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.405      ;
+; -0.373 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.404      ;
+; -0.363 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.394      ;
+; -0.363 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.394      ;
+; -0.360 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.391      ;
+; -0.348 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.379      ;
+; -0.341 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.372      ;
+; -0.339 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.370      ;
+; -0.339 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.370      ;
+; -0.338 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.369      ;
+; -0.328 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.359      ;
+; -0.328 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.359      ;
+; -0.325 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.356      ;
+; -0.325 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.356      ;
+; -0.306 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.337      ;
+; -0.306 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.337      ;
+; -0.304 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.335      ;
+; -0.304 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.335      ;
+; -0.304 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.335      ;
+; -0.303 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.334      ;
+; -0.293 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.324      ;
+; -0.293 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.324      ;
+; -0.290 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.321      ;
+; -0.290 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.321      ;
+; -0.278 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.311      ;
+; -0.271 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.302      ;
+; -0.271 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.302      ;
+; -0.269 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.300      ;
+; -0.269 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.300      ;
+; -0.269 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.300      ;
+; -0.268 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.299      ;
+; -0.258 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.289      ;
+; -0.258 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.289      ;
+; -0.256 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.287      ;
+; -0.255 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.286      ;
+; -0.255 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.286      ;
+; -0.254 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.285      ;
+; -0.240 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 1.274      ;
+; -0.236 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.267      ;
+; -0.236 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.267      ;
+; -0.234 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.265      ;
+; -0.234 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.265      ;
+; -0.233 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.264      ;
+; -0.229 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 1.263      ;
+; -0.223 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.254      ;
+; -0.223 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.254      ;
+; -0.221 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.252      ;
+; -0.221 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.252      ;
+; -0.220 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.251      ;
+; -0.220 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.251      ;
+; -0.219 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.250      ;
+; -0.201 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.232      ;
+; -0.201 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.232      ;
+; -0.199 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.230      ;
+; -0.199 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.230      ;
+; -0.198 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.229      ;
+; -0.188 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[14] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.219      ;
+; -0.188 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 1.219      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'FSM_clock:L0|C'                                                                                         ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; 0.553 ; FSM_hello:L1|EA.S3 ; FSM_hello:L1|EA.S4 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.479      ;
+; 0.589 ; FSM_hello:L1|EA.S7 ; FSM_hello:L1|EA.S0 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.443      ;
+; 0.615 ; FSM_hello:L1|EA.S0 ; FSM_hello:L1|EA.S1 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.417      ;
+; 0.635 ; FSM_hello:L1|EA.S1 ; FSM_hello:L1|EA.S2 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.397      ;
+; 0.636 ; FSM_hello:L1|EA.S2 ; FSM_hello:L1|EA.S3 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.396      ;
+; 0.636 ; FSM_hello:L1|EA.S4 ; FSM_hello:L1|EA.S5 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.396      ;
+; 0.637 ; FSM_hello:L1|EA.S6 ; FSM_hello:L1|EA.S7 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.395      ;
+; 0.639 ; FSM_hello:L1|EA.S5 ; FSM_hello:L1|EA.S6 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 1.000        ; 0.000      ; 0.393      ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                         ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; 0.240 ; FSM_clock:L0|contador[27] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.392      ;
+; 0.246 ; FSM_clock:L0|PE           ; FSM_clock:L0|EA           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.398      ;
+; 0.298 ; FSM_clock:L0|EA           ; FSM_clock:L0|PE           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.450      ;
+; 0.355 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
+; 0.360 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; FSM_clock:L0|contador[13] ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; FSM_clock:L0|contador[25] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.365 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; FSM_clock:L0|contador[18] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; FSM_clock:L0|contador[21] ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.371 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; FSM_clock:L0|contador[17] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; FSM_clock:L0|contador[22] ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; FSM_clock:L0|contador[19] ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; FSM_clock:L0|contador[20] ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; FSM_clock:L0|contador[24] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; FSM_clock:L0|contador[26] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.493 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.645      ;
+; 0.498 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; FSM_clock:L0|contador[12] ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501 ; FSM_clock:L0|contador[25] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.653      ;
+; 0.503 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503 ; FSM_clock:L0|contador[18] ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.655      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.510 ; FSM_clock:L0|EA           ; FSM_clock:L0|contador[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.661      ;
+; 0.511 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; FSM_clock:L0|contador[4]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.514 ; FSM_clock:L0|EA           ; FSM_clock:L0|C            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.515 ; FSM_clock:L0|contador[22] ; FSM_clock:L0|contador[23] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.667      ;
+; 0.515 ; FSM_clock:L0|contador[17] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.667      ;
+; 0.516 ; FSM_clock:L0|contador[26] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516 ; FSM_clock:L0|contador[24] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516 ; FSM_clock:L0|contador[20] ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516 ; FSM_clock:L0|contador[19] ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.528 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[16] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.680      ;
+; 0.533 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; FSM_clock:L0|contador[11] ; FSM_clock:L0|contador[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.534 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[25] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536 ; FSM_clock:L0|contador[25] ; FSM_clock:L0|contador[27] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.688      ;
+; 0.538 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.690      ;
+; 0.538 ; FSM_clock:L0|contador[18] ; FSM_clock:L0|contador[20] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.690      ;
+; 0.546 ; FSM_clock:L0|contador[1]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; FSM_clock:L0|contador[13] ; FSM_clock:L0|contador[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.698      ;
+; 0.547 ; FSM_clock:L0|contador[6]  ; FSM_clock:L0|contador[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; FSM_clock:L0|contador[3]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; FSM_clock:L0|contador[8]  ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; FSM_clock:L0|contador[10] ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.701      ;
+; 0.550 ; FSM_clock:L0|contador[22] ; FSM_clock:L0|contador[24] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.702      ;
+; 0.550 ; FSM_clock:L0|contador[17] ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.702      ;
+; 0.551 ; FSM_clock:L0|contador[24] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551 ; FSM_clock:L0|contador[19] ; FSM_clock:L0|contador[21] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.703      ;
+; 0.556 ; FSM_clock:L0|contador[5]  ; FSM_clock:L0|contador[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.708      ;
+; 0.559 ; FSM_clock:L0|contador[21] ; FSM_clock:L0|contador[22] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.711      ;
+; 0.563 ; FSM_clock:L0|contador[14] ; FSM_clock:L0|contador[17] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.715      ;
+; 0.568 ; FSM_clock:L0|contador[7]  ; FSM_clock:L0|contador[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; FSM_clock:L0|contador[9]  ; FSM_clock:L0|contador[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; FSM_clock:L0|contador[15] ; FSM_clock:L0|contador[18] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.721      ;
+; 0.570 ; FSM_clock:L0|contador[23] ; FSM_clock:L0|contador[26] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571 ; FSM_clock:L0|contador[0]  ; FSM_clock:L0|contador[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.723      ;
+; 0.571 ; FSM_clock:L0|contador[2]  ; FSM_clock:L0|contador[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.723      ;
+; 0.573 ; FSM_clock:L0|contador[16] ; FSM_clock:L0|contador[19] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.725      ;
++-------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'FSM_clock:L0|C'                                                                                          ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock   ; Latch Clock    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+; 0.241 ; FSM_hello:L1|EA.S5 ; FSM_hello:L1|EA.S6 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243 ; FSM_hello:L1|EA.S6 ; FSM_hello:L1|EA.S7 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; FSM_hello:L1|EA.S2 ; FSM_hello:L1|EA.S3 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; FSM_hello:L1|EA.S4 ; FSM_hello:L1|EA.S5 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; FSM_hello:L1|EA.S1 ; FSM_hello:L1|EA.S2 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.397      ;
+; 0.265 ; FSM_hello:L1|EA.S0 ; FSM_hello:L1|EA.S1 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.417      ;
+; 0.291 ; FSM_hello:L1|EA.S7 ; FSM_hello:L1|EA.S0 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.443      ;
+; 0.327 ; FSM_hello:L1|EA.S3 ; FSM_hello:L1|EA.S4 ; FSM_clock:L0|C ; FSM_clock:L0|C ; 0.000        ; 0.000      ; 0.479      ;
++-------+--------------------+--------------------+----------------+----------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|C            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|C            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|EA           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|EA           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|PE           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|PE           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; FSM_clock:L0|contador[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|C|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|C|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|EA|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|EA|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|PE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|PE|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[10]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[10]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[11]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[11]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[12]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[12]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[13]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[13]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[14]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[14]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[15]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[15]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[16]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[16]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[17]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[17]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[18]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[18]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[19]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[19]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; L0|contador[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; L0|contador[20]|clk       ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'FSM_clock:L0|C'                                                                ;
++--------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock          ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+----------------+------------+-----------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S0    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S0    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S1    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S1    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S2    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S2    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S3    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S3    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S4    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S4    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S5    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S5    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S6    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S6    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S7    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; FSM_hello:L1|EA.S7    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L0|C|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L0|C|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L0|C~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S0|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S1|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S2|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S3|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S4|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S5|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S6|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; FSM_clock:L0|C ; Rise       ; L1|EA.S7|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; FSM_clock:L0|C ; Rise       ; L1|EA.S7|clk          ;
++--------+--------------+----------------+------------------+----------------+------------+-----------------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+----------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; FSM_clock:L0|C ; 6.843 ; 6.843 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[0]  ; FSM_clock:L0|C ; 4.746 ; 4.746 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[1]  ; FSM_clock:L0|C ; 4.643 ; 4.643 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[2]  ; FSM_clock:L0|C ; 4.653 ; 4.653 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[3]  ; FSM_clock:L0|C ; 4.323 ; 4.323 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[4]  ; FSM_clock:L0|C ; 4.300 ; 4.300 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[5]  ; FSM_clock:L0|C ; 4.283 ; 4.283 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[6]  ; FSM_clock:L0|C ; 6.843 ; 6.843 ; Rise       ; FSM_clock:L0|C  ;
+; HEX1[*]   ; FSM_clock:L0|C ; 6.375 ; 6.375 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[0]  ; FSM_clock:L0|C ; 6.046 ; 6.046 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[1]  ; FSM_clock:L0|C ; 6.209 ; 6.209 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[2]  ; FSM_clock:L0|C ; 5.955 ; 5.955 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[3]  ; FSM_clock:L0|C ; 5.739 ; 5.739 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[4]  ; FSM_clock:L0|C ; 5.676 ; 5.676 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[5]  ; FSM_clock:L0|C ; 5.661 ; 5.661 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[6]  ; FSM_clock:L0|C ; 6.375 ; 6.375 ; Rise       ; FSM_clock:L0|C  ;
+; HEX2[*]   ; FSM_clock:L0|C ; 6.068 ; 6.068 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[0]  ; FSM_clock:L0|C ; 6.068 ; 6.068 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[1]  ; FSM_clock:L0|C ; 5.953 ; 5.953 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[2]  ; FSM_clock:L0|C ; 5.993 ; 5.993 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[3]  ; FSM_clock:L0|C ; 5.936 ; 5.936 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[4]  ; FSM_clock:L0|C ; 5.775 ; 5.775 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[5]  ; FSM_clock:L0|C ; 5.775 ; 5.775 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[6]  ; FSM_clock:L0|C ; 5.913 ; 5.913 ; Rise       ; FSM_clock:L0|C  ;
+; HEX3[*]   ; FSM_clock:L0|C ; 6.227 ; 6.227 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[0]  ; FSM_clock:L0|C ; 6.176 ; 6.176 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[1]  ; FSM_clock:L0|C ; 6.171 ; 6.171 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[2]  ; FSM_clock:L0|C ; 6.171 ; 6.171 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[3]  ; FSM_clock:L0|C ; 5.873 ; 5.873 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[4]  ; FSM_clock:L0|C ; 6.095 ; 6.095 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[5]  ; FSM_clock:L0|C ; 5.908 ; 5.908 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[6]  ; FSM_clock:L0|C ; 6.227 ; 6.227 ; Rise       ; FSM_clock:L0|C  ;
+; HEX4[*]   ; FSM_clock:L0|C ; 5.314 ; 5.314 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[0]  ; FSM_clock:L0|C ; 5.305 ; 5.305 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[1]  ; FSM_clock:L0|C ; 5.314 ; 5.314 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[2]  ; FSM_clock:L0|C ; 5.314 ; 5.314 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[3]  ; FSM_clock:L0|C ; 5.032 ; 5.032 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[4]  ; FSM_clock:L0|C ; 5.005 ; 5.005 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[5]  ; FSM_clock:L0|C ; 5.005 ; 5.005 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[6]  ; FSM_clock:L0|C ; 5.224 ; 5.224 ; Rise       ; FSM_clock:L0|C  ;
+; HEX5[*]   ; FSM_clock:L0|C ; 5.312 ; 5.312 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[0]  ; FSM_clock:L0|C ; 5.186 ; 5.186 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[1]  ; FSM_clock:L0|C ; 5.206 ; 5.206 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[2]  ; FSM_clock:L0|C ; 5.206 ; 5.206 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[3]  ; FSM_clock:L0|C ; 4.913 ; 4.913 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[4]  ; FSM_clock:L0|C ; 4.870 ; 4.870 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[5]  ; FSM_clock:L0|C ; 4.870 ; 4.870 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[6]  ; FSM_clock:L0|C ; 5.312 ; 5.312 ; Rise       ; FSM_clock:L0|C  ;
+; HEX6[*]   ; FSM_clock:L0|C ; 5.461 ; 5.461 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[0]  ; FSM_clock:L0|C ; 5.227 ; 5.227 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[1]  ; FSM_clock:L0|C ; 5.461 ; 5.461 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[2]  ; FSM_clock:L0|C ; 5.461 ; 5.461 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[3]  ; FSM_clock:L0|C ; 5.187 ; 5.187 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[4]  ; FSM_clock:L0|C ; 5.176 ; 5.176 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[5]  ; FSM_clock:L0|C ; 5.156 ; 5.156 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[6]  ; FSM_clock:L0|C ; 5.450 ; 5.450 ; Rise       ; FSM_clock:L0|C  ;
+; HEX7[*]   ; FSM_clock:L0|C ; 5.676 ; 5.676 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[0]  ; FSM_clock:L0|C ; 5.586 ; 5.586 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[1]  ; FSM_clock:L0|C ; 5.676 ; 5.676 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[2]  ; FSM_clock:L0|C ; 5.646 ; 5.646 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[3]  ; FSM_clock:L0|C ; 5.175 ; 5.175 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[4]  ; FSM_clock:L0|C ; 5.182 ; 5.182 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[5]  ; FSM_clock:L0|C ; 5.338 ; 5.338 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[6]  ; FSM_clock:L0|C ; 5.487 ; 5.487 ; Rise       ; FSM_clock:L0|C  ;
++-----------+----------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++-----------+----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+----------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; FSM_clock:L0|C ; 4.151 ; 4.151 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[0]  ; FSM_clock:L0|C ; 4.210 ; 4.210 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[1]  ; FSM_clock:L0|C ; 4.227 ; 4.227 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[2]  ; FSM_clock:L0|C ; 4.237 ; 4.237 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[3]  ; FSM_clock:L0|C ; 4.155 ; 4.155 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[4]  ; FSM_clock:L0|C ; 4.168 ; 4.168 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[5]  ; FSM_clock:L0|C ; 4.151 ; 4.151 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[6]  ; FSM_clock:L0|C ; 6.079 ; 6.079 ; Rise       ; FSM_clock:L0|C  ;
+; HEX1[*]   ; FSM_clock:L0|C ; 4.439 ; 4.439 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[0]  ; FSM_clock:L0|C ; 4.923 ; 4.923 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[1]  ; FSM_clock:L0|C ; 4.988 ; 4.988 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[2]  ; FSM_clock:L0|C ; 4.734 ; 4.734 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[3]  ; FSM_clock:L0|C ; 4.439 ; 4.439 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[4]  ; FSM_clock:L0|C ; 4.553 ; 4.553 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[5]  ; FSM_clock:L0|C ; 4.538 ; 4.538 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[6]  ; FSM_clock:L0|C ; 5.798 ; 5.798 ; Rise       ; FSM_clock:L0|C  ;
+; HEX2[*]   ; FSM_clock:L0|C ; 4.541 ; 4.541 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[0]  ; FSM_clock:L0|C ; 5.013 ; 5.013 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[1]  ; FSM_clock:L0|C ; 4.541 ; 4.541 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[2]  ; FSM_clock:L0|C ; 4.581 ; 4.581 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[3]  ; FSM_clock:L0|C ; 4.735 ; 4.735 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[4]  ; FSM_clock:L0|C ; 4.735 ; 4.735 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[5]  ; FSM_clock:L0|C ; 4.735 ; 4.735 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[6]  ; FSM_clock:L0|C ; 4.767 ; 4.767 ; Rise       ; FSM_clock:L0|C  ;
+; HEX3[*]   ; FSM_clock:L0|C ; 4.388 ; 4.388 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[0]  ; FSM_clock:L0|C ; 4.388 ; 4.388 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[1]  ; FSM_clock:L0|C ; 4.477 ; 4.477 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[2]  ; FSM_clock:L0|C ; 4.477 ; 4.477 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[3]  ; FSM_clock:L0|C ; 4.592 ; 4.592 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[4]  ; FSM_clock:L0|C ; 4.888 ; 4.888 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[5]  ; FSM_clock:L0|C ; 4.701 ; 4.701 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[6]  ; FSM_clock:L0|C ; 4.778 ; 4.778 ; Rise       ; FSM_clock:L0|C  ;
+; HEX4[*]   ; FSM_clock:L0|C ; 4.407 ; 4.407 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[0]  ; FSM_clock:L0|C ; 4.407 ; 4.407 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[1]  ; FSM_clock:L0|C ; 4.654 ; 4.654 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[2]  ; FSM_clock:L0|C ; 4.654 ; 4.654 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[3]  ; FSM_clock:L0|C ; 4.740 ; 4.740 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[4]  ; FSM_clock:L0|C ; 4.598 ; 4.598 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[5]  ; FSM_clock:L0|C ; 4.598 ; 4.598 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[6]  ; FSM_clock:L0|C ; 4.817 ; 4.817 ; Rise       ; FSM_clock:L0|C  ;
+; HEX5[*]   ; FSM_clock:L0|C ; 4.391 ; 4.391 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[0]  ; FSM_clock:L0|C ; 4.587 ; 4.587 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[1]  ; FSM_clock:L0|C ; 4.671 ; 4.671 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[2]  ; FSM_clock:L0|C ; 4.671 ; 4.671 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[3]  ; FSM_clock:L0|C ; 4.391 ; 4.391 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[4]  ; FSM_clock:L0|C ; 4.483 ; 4.483 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[5]  ; FSM_clock:L0|C ; 4.483 ; 4.483 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[6]  ; FSM_clock:L0|C ; 4.615 ; 4.615 ; Rise       ; FSM_clock:L0|C  ;
+; HEX6[*]   ; FSM_clock:L0|C ; 4.569 ; 4.569 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[0]  ; FSM_clock:L0|C ; 4.569 ; 4.569 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[1]  ; FSM_clock:L0|C ; 4.693 ; 4.693 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[2]  ; FSM_clock:L0|C ; 4.693 ; 4.693 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[3]  ; FSM_clock:L0|C ; 4.789 ; 4.789 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[4]  ; FSM_clock:L0|C ; 4.666 ; 4.666 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[5]  ; FSM_clock:L0|C ; 4.646 ; 4.646 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[6]  ; FSM_clock:L0|C ; 4.783 ; 4.783 ; Rise       ; FSM_clock:L0|C  ;
+; HEX7[*]   ; FSM_clock:L0|C ; 4.771 ; 4.771 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[0]  ; FSM_clock:L0|C ; 4.804 ; 4.804 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[1]  ; FSM_clock:L0|C ; 4.876 ; 4.876 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[2]  ; FSM_clock:L0|C ; 4.846 ; 4.846 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[3]  ; FSM_clock:L0|C ; 4.771 ; 4.771 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[4]  ; FSM_clock:L0|C ; 4.771 ; 4.771 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[5]  ; FSM_clock:L0|C ; 4.927 ; 4.927 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[6]  ; FSM_clock:L0|C ; 5.044 ; 5.044 ; Rise       ; FSM_clock:L0|C  ;
++-----------+----------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.521  ; 0.240 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50        ; -2.521  ; 0.240 ; N/A      ; N/A     ; -1.380              ;
+;  FSM_clock:L0|C  ; 0.102   ; 0.241 ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS  ; -43.598 ; 0.0   ; 0.0      ; 0.0     ; -40.38              ;
+;  CLOCK_50        ; -43.598 ; 0.000 ; N/A      ; N/A     ; -32.380             ;
+;  FSM_clock:L0|C  ; 0.000   ; 0.000 ; N/A      ; N/A     ; -8.000              ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++-----------+----------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port     ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+----------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; FSM_clock:L0|C ; 13.136 ; 13.136 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[0]  ; FSM_clock:L0|C ; 9.044  ; 9.044  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[1]  ; FSM_clock:L0|C ; 8.833  ; 8.833  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[2]  ; FSM_clock:L0|C ; 8.843  ; 8.843  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[3]  ; FSM_clock:L0|C ; 8.034  ; 8.034  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[4]  ; FSM_clock:L0|C ; 7.992  ; 7.992  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[5]  ; FSM_clock:L0|C ; 7.976  ; 7.976  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[6]  ; FSM_clock:L0|C ; 13.136 ; 13.136 ; Rise       ; FSM_clock:L0|C  ;
+; HEX1[*]   ; FSM_clock:L0|C ; 12.518 ; 12.518 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[0]  ; FSM_clock:L0|C ; 11.556 ; 11.556 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[1]  ; FSM_clock:L0|C ; 11.886 ; 11.886 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[2]  ; FSM_clock:L0|C ; 11.444 ; 11.444 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[3]  ; FSM_clock:L0|C ; 10.920 ; 10.920 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[4]  ; FSM_clock:L0|C ; 10.777 ; 10.777 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[5]  ; FSM_clock:L0|C ; 10.762 ; 10.762 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[6]  ; FSM_clock:L0|C ; 12.518 ; 12.518 ; Rise       ; FSM_clock:L0|C  ;
+; HEX2[*]   ; FSM_clock:L0|C ; 11.720 ; 11.720 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[0]  ; FSM_clock:L0|C ; 11.720 ; 11.720 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[1]  ; FSM_clock:L0|C ; 11.414 ; 11.414 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[2]  ; FSM_clock:L0|C ; 11.454 ; 11.454 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[3]  ; FSM_clock:L0|C ; 11.341 ; 11.341 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[4]  ; FSM_clock:L0|C ; 11.028 ; 11.028 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[5]  ; FSM_clock:L0|C ; 11.028 ; 11.028 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[6]  ; FSM_clock:L0|C ; 11.386 ; 11.386 ; Rise       ; FSM_clock:L0|C  ;
+; HEX3[*]   ; FSM_clock:L0|C ; 12.079 ; 12.079 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[0]  ; FSM_clock:L0|C ; 11.963 ; 11.963 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[1]  ; FSM_clock:L0|C ; 11.948 ; 11.948 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[2]  ; FSM_clock:L0|C ; 11.948 ; 11.948 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[3]  ; FSM_clock:L0|C ; 11.182 ; 11.182 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[4]  ; FSM_clock:L0|C ; 11.706 ; 11.706 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[5]  ; FSM_clock:L0|C ; 11.331 ; 11.331 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[6]  ; FSM_clock:L0|C ; 12.079 ; 12.079 ; Rise       ; FSM_clock:L0|C  ;
+; HEX4[*]   ; FSM_clock:L0|C ; 10.339 ; 10.339 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[0]  ; FSM_clock:L0|C ; 10.329 ; 10.329 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[1]  ; FSM_clock:L0|C ; 10.339 ; 10.339 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[2]  ; FSM_clock:L0|C ; 10.339 ; 10.339 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[3]  ; FSM_clock:L0|C ; 9.645  ; 9.645  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[4]  ; FSM_clock:L0|C ; 9.603  ; 9.603  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[5]  ; FSM_clock:L0|C ; 9.603  ; 9.603  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[6]  ; FSM_clock:L0|C ; 10.115 ; 10.115 ; Rise       ; FSM_clock:L0|C  ;
+; HEX5[*]   ; FSM_clock:L0|C ; 10.082 ; 10.082 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[0]  ; FSM_clock:L0|C ; 9.791  ; 9.791  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[1]  ; FSM_clock:L0|C ; 9.880  ; 9.880  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[2]  ; FSM_clock:L0|C ; 9.880  ; 9.880  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[3]  ; FSM_clock:L0|C ; 9.170  ; 9.170  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[4]  ; FSM_clock:L0|C ; 9.095  ; 9.095  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[5]  ; FSM_clock:L0|C ; 9.095  ; 9.095  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[6]  ; FSM_clock:L0|C ; 10.082 ; 10.082 ; Rise       ; FSM_clock:L0|C  ;
+; HEX6[*]   ; FSM_clock:L0|C ; 10.619 ; 10.619 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[0]  ; FSM_clock:L0|C ; 9.891  ; 9.891  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[1]  ; FSM_clock:L0|C ; 10.619 ; 10.619 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[2]  ; FSM_clock:L0|C ; 10.619 ; 10.619 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[3]  ; FSM_clock:L0|C ; 9.652  ; 9.652  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[4]  ; FSM_clock:L0|C ; 9.652  ; 9.652  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[5]  ; FSM_clock:L0|C ; 9.632  ; 9.632  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[6]  ; FSM_clock:L0|C ; 10.294 ; 10.294 ; Rise       ; FSM_clock:L0|C  ;
+; HEX7[*]   ; FSM_clock:L0|C ; 11.067 ; 11.067 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[0]  ; FSM_clock:L0|C ; 10.582 ; 10.582 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[1]  ; FSM_clock:L0|C ; 11.067 ; 11.067 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[2]  ; FSM_clock:L0|C ; 11.037 ; 11.037 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[3]  ; FSM_clock:L0|C ; 9.593  ; 9.593  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[4]  ; FSM_clock:L0|C ; 9.675  ; 9.675  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[5]  ; FSM_clock:L0|C ; 9.993  ; 9.993  ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[6]  ; FSM_clock:L0|C ; 10.351 ; 10.351 ; Rise       ; FSM_clock:L0|C  ;
++-----------+----------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++-----------+----------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port     ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+----------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; FSM_clock:L0|C ; 4.151 ; 4.151 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[0]  ; FSM_clock:L0|C ; 4.210 ; 4.210 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[1]  ; FSM_clock:L0|C ; 4.227 ; 4.227 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[2]  ; FSM_clock:L0|C ; 4.237 ; 4.237 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[3]  ; FSM_clock:L0|C ; 4.155 ; 4.155 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[4]  ; FSM_clock:L0|C ; 4.168 ; 4.168 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[5]  ; FSM_clock:L0|C ; 4.151 ; 4.151 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX0[6]  ; FSM_clock:L0|C ; 6.079 ; 6.079 ; Rise       ; FSM_clock:L0|C  ;
+; HEX1[*]   ; FSM_clock:L0|C ; 4.439 ; 4.439 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[0]  ; FSM_clock:L0|C ; 4.923 ; 4.923 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[1]  ; FSM_clock:L0|C ; 4.988 ; 4.988 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[2]  ; FSM_clock:L0|C ; 4.734 ; 4.734 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[3]  ; FSM_clock:L0|C ; 4.439 ; 4.439 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[4]  ; FSM_clock:L0|C ; 4.553 ; 4.553 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[5]  ; FSM_clock:L0|C ; 4.538 ; 4.538 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX1[6]  ; FSM_clock:L0|C ; 5.798 ; 5.798 ; Rise       ; FSM_clock:L0|C  ;
+; HEX2[*]   ; FSM_clock:L0|C ; 4.541 ; 4.541 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[0]  ; FSM_clock:L0|C ; 5.013 ; 5.013 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[1]  ; FSM_clock:L0|C ; 4.541 ; 4.541 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[2]  ; FSM_clock:L0|C ; 4.581 ; 4.581 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[3]  ; FSM_clock:L0|C ; 4.735 ; 4.735 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[4]  ; FSM_clock:L0|C ; 4.735 ; 4.735 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[5]  ; FSM_clock:L0|C ; 4.735 ; 4.735 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX2[6]  ; FSM_clock:L0|C ; 4.767 ; 4.767 ; Rise       ; FSM_clock:L0|C  ;
+; HEX3[*]   ; FSM_clock:L0|C ; 4.388 ; 4.388 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[0]  ; FSM_clock:L0|C ; 4.388 ; 4.388 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[1]  ; FSM_clock:L0|C ; 4.477 ; 4.477 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[2]  ; FSM_clock:L0|C ; 4.477 ; 4.477 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[3]  ; FSM_clock:L0|C ; 4.592 ; 4.592 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[4]  ; FSM_clock:L0|C ; 4.888 ; 4.888 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[5]  ; FSM_clock:L0|C ; 4.701 ; 4.701 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX3[6]  ; FSM_clock:L0|C ; 4.778 ; 4.778 ; Rise       ; FSM_clock:L0|C  ;
+; HEX4[*]   ; FSM_clock:L0|C ; 4.407 ; 4.407 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[0]  ; FSM_clock:L0|C ; 4.407 ; 4.407 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[1]  ; FSM_clock:L0|C ; 4.654 ; 4.654 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[2]  ; FSM_clock:L0|C ; 4.654 ; 4.654 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[3]  ; FSM_clock:L0|C ; 4.740 ; 4.740 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[4]  ; FSM_clock:L0|C ; 4.598 ; 4.598 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[5]  ; FSM_clock:L0|C ; 4.598 ; 4.598 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX4[6]  ; FSM_clock:L0|C ; 4.817 ; 4.817 ; Rise       ; FSM_clock:L0|C  ;
+; HEX5[*]   ; FSM_clock:L0|C ; 4.391 ; 4.391 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[0]  ; FSM_clock:L0|C ; 4.587 ; 4.587 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[1]  ; FSM_clock:L0|C ; 4.671 ; 4.671 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[2]  ; FSM_clock:L0|C ; 4.671 ; 4.671 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[3]  ; FSM_clock:L0|C ; 4.391 ; 4.391 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[4]  ; FSM_clock:L0|C ; 4.483 ; 4.483 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[5]  ; FSM_clock:L0|C ; 4.483 ; 4.483 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX5[6]  ; FSM_clock:L0|C ; 4.615 ; 4.615 ; Rise       ; FSM_clock:L0|C  ;
+; HEX6[*]   ; FSM_clock:L0|C ; 4.569 ; 4.569 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[0]  ; FSM_clock:L0|C ; 4.569 ; 4.569 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[1]  ; FSM_clock:L0|C ; 4.693 ; 4.693 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[2]  ; FSM_clock:L0|C ; 4.693 ; 4.693 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[3]  ; FSM_clock:L0|C ; 4.789 ; 4.789 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[4]  ; FSM_clock:L0|C ; 4.666 ; 4.666 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[5]  ; FSM_clock:L0|C ; 4.646 ; 4.646 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX6[6]  ; FSM_clock:L0|C ; 4.783 ; 4.783 ; Rise       ; FSM_clock:L0|C  ;
+; HEX7[*]   ; FSM_clock:L0|C ; 4.771 ; 4.771 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[0]  ; FSM_clock:L0|C ; 4.804 ; 4.804 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[1]  ; FSM_clock:L0|C ; 4.876 ; 4.876 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[2]  ; FSM_clock:L0|C ; 4.846 ; 4.846 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[3]  ; FSM_clock:L0|C ; 4.771 ; 4.771 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[4]  ; FSM_clock:L0|C ; 4.771 ; 4.771 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[5]  ; FSM_clock:L0|C ; 4.927 ; 4.927 ; Rise       ; FSM_clock:L0|C  ;
+;  HEX7[6]  ; FSM_clock:L0|C ; 5.044 ; 5.044 ; Rise       ; FSM_clock:L0|C  ;
++-----------+----------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Transfers                                                             ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; CLOCK_50       ; CLOCK_50       ; 493      ; 0        ; 0        ; 0        ;
+; FSM_clock:L0|C ; FSM_clock:L0|C ; 8        ; 0        ; 0        ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Hold Transfers                                                              ;
++----------------+----------------+----------+----------+----------+----------+
+; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------+----------------+----------+----------+----------+----------+
+; CLOCK_50       ; CLOCK_50       ; 493      ; 0        ; 0        ; 0        ;
+; FSM_clock:L0|C ; FSM_clock:L0|C ; 8        ; 0        ; 0        ; 0        ;
++----------------+----------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 56    ; 56   ;
+; Unconstrained Output Port Paths ; 280   ; 280  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 18 19:33:37 2016
+Info: Command: quartus_sta part5 -c part5
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'part5.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+    Info (332105): create_clock -period 1.000 -name FSM_clock:L0|C FSM_clock:L0|C
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.521
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.521       -43.598 CLOCK_50 
+    Info (332119):     0.102         0.000 FSM_clock:L0|C 
+Info (332146): Worst-case hold slack is 0.523
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.523         0.000 CLOCK_50 
+    Info (332119):     0.526         0.000 FSM_clock:L0|C 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -32.380 CLOCK_50 
+    Info (332119):    -0.500        -8.000 FSM_clock:L0|C 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.702
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.702        -6.804 CLOCK_50 
+    Info (332119):     0.553         0.000 FSM_clock:L0|C 
+Info (332146): Worst-case hold slack is 0.240
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.240         0.000 CLOCK_50 
+    Info (332119):     0.241         0.000 FSM_clock:L0|C 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -32.380 CLOCK_50 
+    Info (332119):    -0.500        -8.000 FSM_clock:L0|C 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 439 megabytes
+    Info: Processing ended: Wed May 18 19:33:38 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
